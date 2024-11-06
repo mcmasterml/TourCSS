@@ -1,0 +1,361 @@
+
+
+/* Base button styling */
+.btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.btn.primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+/* Outline Button */
+.btn.outline {
+    background-color: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.btn.outline:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Rounded Button */
+.btn.rounded {
+    background-color: #28a745;
+    color: white;
+    border-radius: 50px;
+}
+
+.btn.rounded:hover {
+    background-color: #218838;
+}
+
+/* Gradient Button */
+.btn.gradient {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+}
+
+.btn.gradient:hover {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+}
+
+/* Shadow Button */
+.btn.shadow {
+    background-color: #6c757d;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn.shadow:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Glow Button */
+.btn.glow {
+    background-color: #6610f2;
+    color: white;
+    box-shadow: 0px 0px 8px rgba(102, 16, 242, 0.6);
+}
+
+.btn.glow:hover {
+    box-shadow: 0px 0px 16px rgba(102, 16, 242, 1);
+}
+
+/* Animated Button */
+.btn.animate {
+    background-color: #e83e8c;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn.animate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-100%) rotate(45deg);
+    transition: transform 0.5s;
+}
+
+.btn.animate:hover::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+
+/*------------*/
+/*------------*/
+/*------------*/
+
+
+/* Translate Button */
+.btn.translate {
+    background-color: #17a2b8;
+    color: white;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.btn.translate:hover {
+    transform: translateY(-5px);
+}
+
+/* 3D Press Button */
+.btn.press {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    position: relative;
+    transition: transform 0.1s ease;
+    box-shadow: 0px 5px 0px #b28704, 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn.press:active {
+    transform: translateY(5px);
+    box-shadow: 0px 2px 0px #b28704, 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Button */
+.btn.floating {
+    background-color: #28a745;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn.floating:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Flip Button */
+.btn.flip {
+    background-color: #6f42c1;
+    color: white;
+    perspective: 1000px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.btn.flip:hover {
+    transform: rotateY(180deg);
+}
+
+/* Ripple Button */
+.btn.ripple {
+    background-color: #e83e8c;
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.btn.ripple::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: scale(10);
+}
+
+.btn.ripple:active::after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Neon Button */
+.btn.neon {
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 24px;
+    background-color: #1e1e1e;
+    text-shadow: 0 0 5px #00e6e6, 0 0 10px #00e6e6, 0 0 20px #00e6e6, 0 0 30px #00e6e6;
+    border: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.btn.neon:hover {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
+}
+
+/* Wobble Button */
+.btn.wobble {
+    background-color: #dc3545;
+    color: white;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.btn.wobble:hover {
+    animation: wobble 0.6s ease infinite;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: translateX(0); }
+    15% { transform: translateX(-10px); }
+    30% { transform: translateX(10px); }
+    45% { transform: translateX(-6px); }
+    60% { transform: translateX(6px); }
+    75% { transform: translateX(-4px); }
+    90% { transform: translateX(4px); }
+}
+
+
+/*-----------*/
+/*-----------*/
+/*-----------*/
+
+
+/* Base styling for aesthetics */
+.btn {
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+/* Pastel Button */
+.btn.pastel {
+    background-color: #f7d1cd;
+    color: #6a515e;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn.pastel:hover {
+    background-color: #f4b5af;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Soft Gradient Button */
+.btn.soft-gradient {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #6a3c3e;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn.soft-gradient:hover {
+    background: linear-gradient(135deg, #fcb69f, #ffecd2);
+    transform: translateY(-3px);
+}
+
+.btn.soft-gradient:active {
+    transform: translateY(5px);
+    box-shadow: 0px 2px 0px #b28704, 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Rounded Outline Button */
+.btn.rounded-outline {
+    background-color: transparent;
+    color: #2e8b57;
+    border: 2px solid #2e8b57;
+    border-radius: 20px;
+    padding: 12px 24px;
+}
+
+.btn.rounded-outline:hover {
+    background-color: #2e8b57;
+    color: white;
+}
+
+/* Glassmorphism Button */
+.btn.glass {
+    background: rgba(255, 255, 255, 0.2);
+    color: #333;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn.glass:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Subtle Shadow Button */
+.btn.subtle-shadow {
+    background-color: #0077b6;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn.subtle-shadow:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Pill Button */
+.btn.pill {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn.pill:hover {
+    background-color: #ff4e4e;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Elegant Button */
+.btn.elegant {
+    background-color: #333;
+    color: #e0e0e0;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: 500;
+    box-shadow: inset 0px 0px 2px rgba(255, 255, 255, 0.2), 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn.elegant:hover {
+    background-color: #444;
+    box-shadow: inset 0px 0px 4px rgba(255, 255, 255, 0.3), 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Frosted Glass Button */
+.btn.frosted {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn.frosted:hover {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.35);
+}
